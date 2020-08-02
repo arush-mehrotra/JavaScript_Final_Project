@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;700&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 12px; */
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    min-height: 100vh;
+}
+
+h1{
+    font-size:24px;
+}
+
+h2{
+    font-size:18px;
+}
+
+p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title{
+    font-family:'Staatliches', cursive;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section1{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
+    column-gap: 25px;
+}
+
+.budget-field{
+    width:100%;
+    border: 5px solid green;
+    border-radius: 5px;
+    padding: 5 px;
+}
+
+#form1{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+label{
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input{
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+input:focus{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#budget-add{
+    width:100%;
+    margin-left: 5 px;
+    margin-right: 5 px;
+    border: 2 px solid black;
+    padding: 3px;
+    font-family: 'Sora', sans-serif
+    cursor: pointer;
+}
+
+.error{
+   background-color: #fa8072;
+   margin: 0;
+   padding: 5px;
+   transform: scaleY(0);
+   transition: 250ms;
+   transform-origin:top;
+}
+
+.error-show{
+    transform: scaleY(1);
+    padding: 5px;
+}
+
+.input-error{
+   /*  border: 5px solid #fa8072; */
+}
+
+.visual{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start
+}
+
+.visual-item{
+    height:100%
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visual-item-image{
+    width: 100px;
+}
+
+.visual-item-expenses{
+    font-size: 20px;
+    color: #fa8072
+}
+
+.visual-item-budget{
+    font-size: 20px;
+    color: green;
+}
+
+.visual-item-balance{
+    font-size: 20px;
+}
+
+.section2{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
+    column-gap: 25px;
+    margin-top: 40px;
+}
+
+.expense-field{
+    width: 100%;
+    border: 5px solid #fa8072;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#form2{
+    display:flex;
+    flex-direction: column;
+    padding: 10 px;
+    width: 100%;
+
+}
+
+#expenses-add{
+    width:100%;
+    margin-left: 5 px;
+    margin-right: 5 px;
+    border: 2 px solid black;
+    padding: 3px;
+    font-family: 'Sora', sans-serif
+    cursor: pointer;
+}
+
+.expenses-table{
+    width: 100%;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){
+    background-color: gray;
+}
+
+th,td{
+    width: (100%/3);
+    text-align: center;
+    border: 2 px solid black;
+    padding: 3 px;
+}
+
+.expenses-title{
+    font-size: 18px;
+}
+
+.expenses-value{
+    font-size: 18px;
+}
+
+.edit{
+    font-size: 18px;
+}
+.edit img{
+    border: none;
+    cursor: pointer;
+    padding: 3 px;
+    border-radius: 5 px;
+
+}
+
+.edit img:hover{
+    background-color: #A9A9A9;
+}
+
+.edit img:active{
+    transform: scaleY(0.8);
+}
+
+@media(max-width: 900px){
+    .visual{
+        margin-top: 20px;
+    }
+    .expense-field{
+        margin-top: 20px;
+    }
+}

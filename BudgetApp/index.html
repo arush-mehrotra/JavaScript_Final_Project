@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title>Budget App - Arush Mehrotra</title>
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "main.js" defer></script>
+    </head>
+    <body>
+        <div class = "container">
+            <h1 class = "title">Budget App - Arush Mehrotra</h1>
+            <div class = "section1">
+
+                <div class = "budget-field">
+                    <form action = "#" id = "form1">
+                        <label for = "">Please enter your budget</label>
+                        <p class = "error">Please enter a positive non-zero value!</p>
+                        <input type = "text" id = "budget-value">
+                        <button id = "budget-add">Add Budget</button>
+                    </form>
+                </div>
+                
+                <div class = "visual">
+
+                    <div class = "visual-item">
+                        <h2 class = "visual-item-title">Budget</h2>
+                        <img class = "visual-item-image" src = "./images/wallet.png">
+                        <p class = "visual-item-budget">
+                            $<span id = "visual-item-budget-value">0</span>
+                        </p>
+                    </div>
+
+                    <div class = "visual-item">
+                        <h2 class = "visual-item-title">Expenses</h2>
+                        <img class = "visual-item-image" src = "./images/credit-card.png">
+                        <p class = "visual-item-expenses">
+                            $<span id = "visual-item-expenses-value">0</span>
+                        </p>
+                    </div>
+
+                    <div class = "visual-item">
+                        <h2 class = "visual-item-title">Total Balance</h2>
+                        <img class = "visual-item-image" src = "./images/money.png">
+                        <p class = "visual-item-balance">
+                            $<span id = "visual-item-balance-value">0</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class = "section2">
+                <div class = "expense-field">
+                    <form action = "#" id = "form2">
+                        <label for = "">Please enter your expense name</label>
+                        <p class = "error">Please enter a value!</p>
+                        <input type = "text" id = "expenses-name">
+                        <label for = "">Please enter your expense amount</label>
+                        <p class = "error">Please enter a positive non-zero value!</p>
+                        <input type = "text" id = "expenses-amount">
+                        <button id = "expenses-add">Add Expense</button>
+                    </form>
+                </div>
+
+                <div class = "expense-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class = "expenses-title">Expense Title</th>
+                                <th class = "expenses-value">Expense Value</th>
+                                <th class = "edit">Delete/Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <template id = "expenses-row">
+                        <tr>
+                            <td class = "expenses-title"></td>
+                            <td cass = "expenses-value"></td>
+                            <td class = "edit">
+                                <img class = "deleteRow" src = "./images/trash.png">
+                                <img class = "editRow" src = "./images/edit.png">
+                            </td>
+                        </tr>
+                    </template>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
